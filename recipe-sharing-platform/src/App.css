@@ -1,4 +1,14 @@
-header {
-  font-size: 40px;
+#root {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.headerFormat  {
+  font-size: 20px;
   margin-top: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
 }

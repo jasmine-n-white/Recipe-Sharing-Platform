@@ -1,7 +1,7 @@
 function Header() {
     return (
         <>
-        <header>Recipe Sharing Platform!</header>
+        <h1>Recipe Sharing Platform!</h1>
         </>
     );
 
