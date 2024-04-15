@@ -3,13 +3,12 @@ import Header from './Header'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [likes, setLikes] = useState(0)
 
   return (
-    <>
-    <header className="headerFormat">    
-      <Header  />
-    </header>
+    <>  
+      <Header />
+    
       
     </>
   )

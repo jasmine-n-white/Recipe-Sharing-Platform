@@ -1,7 +1,12 @@
+import './Header.css'
+
 function Header() {
     return (
         <>
-        <h1>Recipe Sharing Platform!</h1>
+        <header className="headerFormat">
+            <h1>Recipe Sharing Platform!</h1>
+            <p>Add some recipes!</p>
+         </header>
         </>
     );
 
