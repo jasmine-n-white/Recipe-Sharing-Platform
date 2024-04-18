@@ -1,8 +1,19 @@
 #root {
-  width: 1000px; 
+  width: 100%; 
   margin: 0 auto;
-  padding: 2rem;
 }
 
-
+.headerFormat  {
+  background-color: #4778e0;
+  padding: 5px 20px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  position:absolute;
+  margin: 0px auto;
+}
 
