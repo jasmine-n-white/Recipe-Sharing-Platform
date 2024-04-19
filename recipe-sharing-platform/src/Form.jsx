@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import validator from 'validator';
 
 function Form() {
   const [formData, setFormData] = useState({recipeName: "", ingredients: "", instructions: "", imageURL: ""});
@@ -33,13 +34,9 @@ const handleInstructions = (event) => {
 setFormData({ ...formData, instructions: value });
 }
 
-function isURL(str) {
-  return /(?:https?):\/\/(\w+:?\w*)?(\S+)(:\d+)?(\/|\/([\w#!:.?+=&%!\-\/]))?/;
-}
-
 const handleImageURL = (event) => {
   const {value} = event.target;
-  if (!isURL(value) || value.length<2) {
+  if (!validator.isURL(value)) {
     setErrors({ ...errors, imageURL: "A valid URL for the image is required."});
   } else {
     setErrors({ ...errors, imageURL: ""});
