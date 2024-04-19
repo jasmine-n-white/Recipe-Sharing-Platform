@@ -1,9 +1,9 @@
 import {useState} from 'react';
 import validator from 'validator';
 
-function Form() {
+function Form({addRecipe}) {
   const [formData, setFormData] = useState({recipeName: "", ingredients: "", instructions: "", imageURL: ""});
-  const [errors, setErrors] = useState({recipeName: "", ingredients: "", instructions: "", imageURL: ""});
+  const [errors, setErrors] = useState({recipeName: "", ingredients: "", instructions: "", imageURL: "", overallForm: ""});
   const handleRecipeName = (event) => {
     const {value} = event.target;
     if (value.length < 2) {
@@ -36,22 +36,33 @@ setFormData({ ...formData, instructions: value });
 
 const handleImageURL = (event) => {
   const {value} = event.target;
-  if (!validator.isURL(value)) {
-    setErrors({ ...errors, imageURL: "A valid URL for the image is required."});
-  } else {
-    setErrors({ ...errors, imageURL: ""});
-  }
+  // if (!validator.isURL(value)) {
+  //   setErrors({ ...errors, imageURL: "A valid URL for the image is required."});
+  // } else {
+  //   setErrors({ ...errors, imageURL: ""});
+  // }
   setFormData({ ... formData, imageURL: value});
 }
 
+const handleSubmission = (event) => {
+  event.preventDefault();
+  const {recipeName, ingredients, instructions, imageURL} = formData;
+  if (recipeName && !errors.recipeName && ingredients && !errors.ingredients && instructions && !errors.instructions && imageURL && !errors.imageURL) {
+    addRecipe(formData);
+    setFormData({recipeName: "", ingredients:"", instructions:"", imageURL:""});
+    setErrors({recipeName: "", ingredients:"", instructions:"", imageURL:""});
+  } else {
+    setErrors({...errors, overallForm: "Something is wrong with your form!"});
+  }
+}
   return (
     <div className="recipeForm">
     <h2>Add a Recipe 🍲😋</h2>
-    <form>
+    <form onSubmit={handleSubmission}>
         <input id="recipeName" name="recipeName" type="text" placeholder="Recipe Name" value={formData.recipeName} onChange={handleRecipeName} />
         <textarea id="ingredients" name="ingredients" type="text" placeholder="Ingredients" value={formData.ingredients} onChange={handleIngredients} />
         <textarea id="instructions" name="instructions" type="text" placeholder="Instructions" value={formData.instructions} onChange={handleInstructions} />
-        <input id="imageURL"name="imageURL" type="url" placeholder="Image URL" value={formData.imageURL} onChange={handleImageURL} />
+        <input id="imageURL"name="imageURL" type="text" placeholder="Image URL" value={formData.imageURL} onChange={handleImageURL} />
         <section className="errors">
           <ul>
             {Object.values(errors).map((error, i) => (

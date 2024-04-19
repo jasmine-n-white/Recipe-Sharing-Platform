@@ -1,15 +1,20 @@
 import { useState } from 'react'
 import Header from './Header'
 import Form from './Form'
+import RecipeList from './RecipeList';
 import './App.css'
 
 function App() {
-  const [likes, setLikes] = useState(0);
+  const [posts, setPosts] = useState([]);
+  const addRecipe = (newPost) => {
+    setPosts([...posts, newPost]);
+  }
 
   return (
     <>  
       <Header />
-      <Form />     
+      <RecipeList recipes={posts}/>
+      <Form addRecipe={addRecipe} />     
     </>
   )
 }
