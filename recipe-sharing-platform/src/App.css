@@ -38,3 +38,11 @@
   justify-content: center;
 
 }
+
+.errors ul {
+  list-style-type: none;
+  color: red;
+  
+
+}
+
