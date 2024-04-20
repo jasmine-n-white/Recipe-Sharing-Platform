@@ -13,21 +13,23 @@
   align-items: center;
   top: 0;
   width: 100%;
-  position: absolute;
+  position: fixed;
   margin: 0px auto;
 }
 
 .mainContent {
+  top: 0;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  justify-content: space-between;
   
 }
 
 .recipeForm {
   text-align: center;
-  position: fixed;
-  margin: 0;
+  position:fixed;
+  top: 150px;
+  float: right;
   background-color: rgba(80, 221, 174, 0.5);
   border: 1px solid yellow;
   border-radius: 5px;
@@ -36,9 +38,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  justify-self:end;
-  height: 70vh;
-  width: 50vh;
+  align-self: center;
+  height: min-content;
+  min-width: 65vh;
 
 
 }
@@ -67,19 +69,22 @@
 
 .grid-container {
   display: grid;
-  grid-template-rows: repeat(auto-fill, minmax(200px, auto));
+  grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
+  margin-top: 125px;
   gap: 20px;
   padding: 20px;
-  width: 50%;
-  float: right;
+  width: 100%;
+  justify-content: end;
+  align-self: center;
+  margin-right: 100px;
 }
 
 .recipeCard {
   display: flex;
   flex-direction: column;
-  margin: 150px;
-  width: 100vh;
+  margin: 0;
   background-color: blue;
+  justify-self: end;
 }
 
 .recipeCard h3 {
