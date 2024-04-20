@@ -13,8 +13,11 @@ function App() {
   return (
     <>  
       <Header />
-      <RecipeList recipes={posts}/>
-      <Form addRecipe={addRecipe} />     
+      <div className="mainContent">
+         <RecipeList recipes={posts}/>
+         <Form addRecipe={addRecipe} />  
+      </div>
+        
     </>
   )
 }

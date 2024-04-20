@@ -36,11 +36,11 @@ setFormData({ ...formData, instructions: value });
 
 const handleImageURL = (event) => {
   const {value} = event.target;
-  // if (!validator.isURL(value)) {
-  //   setErrors({ ...errors, imageURL: "A valid URL for the image is required."});
-  // } else {
-  //   setErrors({ ...errors, imageURL: ""});
-  // }
+  if (!validator.isURL(value)) {
+    setErrors({ ...errors, imageURL: "A valid URL for the image is required."});
+  } else {
+    setErrors({ ...errors, imageURL: ""});
+  }
   setFormData({ ... formData, imageURL: value});
 }
 
