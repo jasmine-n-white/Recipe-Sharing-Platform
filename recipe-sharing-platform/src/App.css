@@ -87,9 +87,21 @@
   justify-self: end;
 }
 
-#likeButton {
+.likeSection {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
+}
+
+#likeButton{
+  padding: 0;
+  margin: 0;
+  height: 50px;
+  width: 50px;
+  background-color: blue;
+  border-radius: 50%;
+  border: none;
+  
 }
 
 .recipeCard h3 {
@@ -106,7 +118,7 @@
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.recipeCard img {
+#recipeImage {
   display: flex;
   width: 300px;
   border-radius: 4px;
