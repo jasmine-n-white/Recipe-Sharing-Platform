@@ -1,16 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+
+
 #root {
   width: 100%; 
   margin: 0 auto;
 }
 
 .headerFormat  {
-  background-color: #4778e0;
-  padding: 5px 20px;
+  font-family: 'Homemade Apple';
+  background-color: #A1C398;
+  padding: 0px 100px;
   color: white;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   top: 0;
   width: 100%;
   position: fixed;
@@ -29,9 +30,9 @@
   text-align: center;
   position:fixed;
   top: 150px;
-  float: right;
-  background-color: rgba(80, 221, 174, 0.5);
-  border: 1px solid yellow;
+  margin-left: 200px;
+  background-color: #C6EBC5;
+  border: 1px solid white;
   border-radius: 5px;
   padding: 20px;
   color: black;
@@ -76,31 +77,41 @@
   width: 100%;
   justify-content: end;
   align-self: center;
-  margin-right: 100px;
+  margin-right: 200px;
 }
 
 .recipeCard {
   display: flex;
   flex-direction: column;
-  margin: 0;
-  background-color: blue;
+  color: black;
+  margin: 10px;
+  padding: 30px;
+  background-color: #FEFDED;
   justify-self: end;
+  max-width: min-content;
+  border-radius: 20px;
 }
 
 .likeSection {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  padding: 0 10px;
+}
+
+.likeSection p {
+  align-self:center;
 }
 
 #likeButton{
   padding: 0;
   margin: 0;
-  height: 50px;
-  width: 50px;
-  background-color: blue;
+  height: 20px;
+  width: 20px;
+  background-color: black;
   border-radius: 50%;
   border: none;
+  align-self: center;
   
 }
 
