@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
 
 
 #root {
@@ -42,10 +43,12 @@
   align-self: center;
   height: min-content;
   min-width: 65vh;
-
-
 }
 
+.recipeForm h1 {
+  font-family: 'Cookie';
+  font-size: 3.2em;
+}
 
 
 .recipeForm form {
@@ -66,6 +69,13 @@
   list-style-type: none;
   color: red;
   
+}
+
+.scrollDown {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: flex-start;
 }
 
 .grid-container {

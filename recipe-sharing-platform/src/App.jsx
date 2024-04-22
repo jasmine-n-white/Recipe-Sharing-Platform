@@ -8,6 +8,7 @@ function App() {
   const [posts, setPosts] = useState([]);
   const addRecipe = (newPost) => {
     setPosts([...posts, newPost]);
+  
   }
 
   return (

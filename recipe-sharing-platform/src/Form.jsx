@@ -57,7 +57,7 @@ const handleSubmission = (event) => {
 }
   return (
     <div className="recipeForm">
-    <h2>Add a Recipe 🍲😋</h2>
+    <h1>Share Your Recipe! 🍲😋</h1>
     <form onSubmit={handleSubmission}>
         <input id="recipeName" name="recipeName" type="text" placeholder="Recipe Name" value={formData.recipeName} onChange={handleRecipeName} />
         <textarea id="ingredients" name="ingredients" type="text" placeholder="Ingredients" value={formData.ingredients} onChange={handleIngredients} />
