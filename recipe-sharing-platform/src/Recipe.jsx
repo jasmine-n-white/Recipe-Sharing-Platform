@@ -3,23 +3,25 @@ import { useState } from 'react'
 function Recipe({recipe}) {
   const [like, setLike] = useState(0);
   
-  // const ingredients = recipe.ingredients;
-  // for (i = 0; i<ingredients.length; i++) {
-  //    if (ingredients[i] == "-") {
-  //    document.createElement("\n");
-  //    recipe.appendChild("\n");
-  // }
+ 
+  const instructionList = recipe.instructions;
 
-  // }
+//  for (i=0; i<instructionList.length; i++) {
+//   if (instructionList[i].value == ".") {
+    
+//   }
+//  }
+ 
+
  
   return (
    <div className="recipeCard">
     <h3>{recipe.recipeName}</h3>
     <img id="recipeImage" src= {recipe.imageURL} alt="user image"/>
     <h3>Ingredients</h3>
-    <p>{recipe.ingredients}</p>
+    <ul>{recipe.ingredients}</ul>
     <h3>Instructions</h3>
-    <p>{recipe.instructions}</p>
+    <ol>{recipe.instructions}</ol>
     <hr/>
     <div class = "likeSection">
     <button id="likeButton" type="click" onClick={() => setLike((like) => like+1)}><img width="20" height="20" src="https://img.icons8.com/ios-filled/50/FFFFFF/love-circled.png" alt="love-circled"/></button>
