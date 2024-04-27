@@ -60,7 +60,7 @@ const handleSubmission = (event) => {
     <h1>Share Your Recipe!</h1>
     <form onSubmit={handleSubmission}>
         <input id="recipeName" name="recipeName" type="text" placeholder="Recipe Name" value={formData.recipeName} onChange={handleRecipeName} />
-        <textarea id="ingredients" name="ingredients" type="text" placeholder="Ingredients (ex. 2 cups water, 3 tsp salt, 1/2 white onion, etc." value={formData.ingredients} onChange={handleIngredients} />
+        <textarea id="ingredients" name="ingredients" type="text" placeholder="Ingredients (ex. 2 cups water, 3 tsp salt, 1/2 white onion, etc.)" value={formData.ingredients} onChange={handleIngredients} />
         <textarea id="instructions" name="instructions" type="text" placeholder="Instructions (click 'enter' on your keyboard to begin a new line of text for each step)" value={formData.instructions} onChange={handleInstructions} />
         <input id="imageURL"name="imageURL" type="text" placeholder="Image URL" value={formData.imageURL} onChange={handleImageURL} />
         <section className="errors">
