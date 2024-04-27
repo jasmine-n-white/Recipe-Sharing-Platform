@@ -15,8 +15,8 @@ function App() {
     <>  
       <Header />
       <div className="mainContent"> 
-         <RecipeList recipes={posts}/>
          <Form addRecipe={addRecipe} /> 
+         <RecipeList recipes={posts}/>
       </div>
     </>
   )

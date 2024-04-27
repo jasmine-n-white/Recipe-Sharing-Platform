@@ -9,7 +9,7 @@ function RecipeList({recipes}) {
 
   let extraText = ""; 
   if (posts == "") {
-   extraText = <p>No posts available to view yet. Add a new post!</p>;
+   extraText = <p id="preCardText">No posts available to view yet. Add a new post!</p>;
   } else {
     extraText = <div className="scrollDown"><img width="100" height="100" src="https://img.icons8.com/dotty/80/FFFFFF/thick-arrow-pointing-down.png" alt="thick-arrow-pointing-down"/><p>Scroll Down to View Posts</p><img width="100" height="100" src="https://img.icons8.com/dotty/80/FFFFFF/thick-arrow-pointing-down.png" alt="thick-arrow-pointing-down"/></div>;
   }
